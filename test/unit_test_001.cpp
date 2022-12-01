@@ -39,15 +39,15 @@ unittest_teardown()
 
 unittest(constant)
 {
-  assetEqual(0x00, AD56X8_PWR_NORMAL);
-  assetEqual(0x01, AD56X8_PWR_1K    );
-  assetEqual(0x02, AD56X8_PWR_100K  );
-  assetEqual(0x03, AD56X8_PWR_TRI   );
+  assertEqual(0x00, AD56X8_PWR_NORMAL    );
+  assertEqual(0x01, AD56X8_PWR_1K        );
+  assertEqual(0x02, AD56X8_PWR_100K      );
+  assertEqual(0x03, AD56X8_PWR_TRI_STATE );
 
-  assetEqual(0x00, AD56X8_CC_0000   );
-  assetEqual(0x01, AD56X8_CC_8000   );
-  assetEqual(0x02, AD56X8_CC_FFFF   );
-  assetEqual(0x03, AD56X8_CC_NOP    );
+  assertEqual(0x00, AD56X8_CC_0000 );
+  assertEqual(0x01, AD56X8_CC_8000 );
+  assertEqual(0x02, AD56X8_CC_FFFF );
+  assertEqual(0x03, AD56X8_CC_NOP  );
 }
 
 
