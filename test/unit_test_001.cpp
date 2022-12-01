@@ -87,6 +87,8 @@ unittest(get_setValue)
 {
   AD56X8 AD0(8);
 
+  AD0.begin();
+
   //  valid channels
   for (uint8_t chan = 0; chan < 8; chan++)
   {
@@ -106,6 +108,9 @@ unittest(get_PowerUpValue)
 {
   AD56X8 AD0(8);
   AD5668_3 AD16M(7);
+
+  AD0.begin();
+  AD16M.begin();
 
   //  valid channels  0 Volts
   for (uint8_t chan = 0; chan < 8; chan++)
@@ -127,6 +132,8 @@ unittest(prepareChannel)
 {
   AD56X8 AD0(8);
 
+  AD0.begin();
+
   //  valid channels
   for (uint8_t chan = 0; chan < 8; chan++)
   {
@@ -146,6 +153,8 @@ unittest(set_power_mode)
 {
   AD56X8 AD0(8);
 
+  AD0.begin();
+
   assertTrue(AD0.setPowerMode(0, 0));
   assertTrue(AD0.setPowerMode(1, 0));
   assertTrue(AD0.setPowerMode(2, 0));
@@ -160,6 +169,8 @@ unittest(set_clear_code)
 {
   AD56X8 AD0(8);
 
+  AD0.begin();
+
   assertTrue(AD0.setClearCode(0));
   assertTrue(AD0.setClearCode(1));
   assertTrue(AD0.setClearCode(2));
@@ -167,7 +178,6 @@ unittest(set_clear_code)
   //  CCMode out of range test.
   assertFalse(AD0.setClearCode(4));
 }
-
 
 
 unittest_main()
