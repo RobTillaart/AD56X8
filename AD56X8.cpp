@@ -111,8 +111,8 @@ void AD56X8::setGPIOpins(uint8_t clk, uint8_t miso, uint8_t mosi, uint8_t select
 bool AD56X8::setValue(uint8_t channel, uint16_t value)
 {
   if (channel > 7) return false;
-  if ((_type == 12} && (value > 4095))  return false;
-  if ((_type == 14} && (value > 16383)) return false;
+  if ((_type == 12) && (value > 4095))  return false;
+  if ((_type == 14) && (value > 16383)) return false;
   _value[channel] = value;
   updateDevice(AD56X8_REG_WRITE_UPDATE, channel, value);
   return true;
@@ -130,6 +130,8 @@ uint16_t AD56X8::getValue(uint8_t channel)
 bool AD56X8::prepareChannel(uint8_t channel, uint16_t value)
 {
   if (channel > 7) return false;
+  if ((_type == 12) && (value > 4095))  return false;
+  if ((_type == 14) && (value > 16383)) return false;
   _value[channel] = value;
   updateDevice(AD56X8_REG_WRITE, channel, value);
   return true;
@@ -146,6 +148,7 @@ bool AD56X8::updateChannel(uint8_t channel)
 
 void AD56X8::updateAllChannels()
 {
+  //  TODO test
   //  TODO replace with hardware LDAC if supported.
   updateDevice(AD56X8_REG_WRITE_LDAC, 0, _value[0]);
 }
@@ -277,7 +280,7 @@ AD5668_3::AD5668_3(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)
   for (int i = 0; i < 8; i++) _value[i] = 32768;  //  MIDSCALE
 }
 
-void AD56X8_3::reset()
+void AD5668_3::reset()
 {
   updateDevice(AD56X8_REG_RESET, 0, 0, 0);
   //  reset the internal values.

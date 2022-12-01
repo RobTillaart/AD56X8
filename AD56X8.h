@@ -121,6 +121,8 @@ class AD5668_3 : public AD56X8
 public:
   AD5668_3(uint8_t slaveSelect);
   AD5668_3(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect);
+
+  void     reset();
 };
 
 
