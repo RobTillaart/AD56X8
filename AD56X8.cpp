@@ -127,6 +127,29 @@ uint16_t AD56X8::getValue(uint8_t channel)
 }
 
 
+bool AD56X8::setPercentage(uint8_t channel, float percentage)
+{
+  uint16_t value = 0;
+  if      (_type == 16) value = round(655.35 * percentage);
+  else if (_type == 14) value = round(163.83 * percentage);
+  else /* type = 12 */  value = round( 40.95 * percentage):
+  return setValue(channel, value);
+}
+
+
+float AD56X8::getPercentage(uint8_t channel)
+{
+  float value = getValue(channel);
+  if (value > 0) 
+  {
+    if (_type == 16) return value * ( 1.0 / 655.35);
+    if (_type == 14) return value * ( 1.0 / 163.83);
+    if (_type == 12) return value * ( 1.0 /  40.95);
+  }
+  return 0;
+}
+
+
 bool AD56X8::prepareChannel(uint8_t channel, uint16_t value)
 {
   if (channel > 7) return false;
@@ -148,8 +171,6 @@ bool AD56X8::updateChannel(uint8_t channel)
 
 void AD56X8::updateAllChannels()
 {
-  //  TODO test
-  //  TODO replace with hardware LDAC if supported.
   updateDevice(AD56X8_REG_WRITE_LDAC, 0, _value[0]);
 }
 

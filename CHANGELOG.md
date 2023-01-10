@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - update GitHub actions
 - update license
 - add wave example (triangle)
+- add bool setPercentage(channel, percentage)
+- add float getPercentage(channel)
 
 
 ## [0.1.1] - 2022-12-01

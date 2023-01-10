@@ -85,6 +85,8 @@ Sets internal values to zero.
 Returns false if channel out of range.
 - **uint16_t getValue(uint8_t channel)** returns set OR prepared value.
 At power up the DAC's will be reset to 0 V except the AD5668-3 (2.5V).
+- **bool setPercentage(uint8_t channel, float percentage)** idem.
+- **float getPercentage(uint8_t channel)** idem.
 - **bool prepareChannel(uint8_t channel, uint16_t value)** prepares the value for a channel.
 Returns false if channel out of range.
 - **bool updateChannel(uint8_t channel)** writes the prepared value to ADC.

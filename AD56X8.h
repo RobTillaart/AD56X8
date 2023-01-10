@@ -41,6 +41,8 @@ public:
   //  sets output immediately = prepare + update.
   bool     setValue(uint8_t channel, uint16_t value);
   uint16_t getValue(uint8_t channel);
+  bool     setPercentage(uint8_t channel, float percentage);
+  float    getPercentage(uint8_t channel);
 
   //  prep & update separately
   bool     prepareChannel(uint8_t channel, uint16_t value);
