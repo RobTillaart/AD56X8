@@ -1,7 +1,7 @@
 //
 //    FILE: AD56X8.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.1
+// VERSION: 0.1.2
 //    DATE: 2022-07-28
 // PURPOSE: Arduino library for AD56X8, SPI 8 channel Digital Analog Convertor.
 
@@ -325,9 +325,6 @@ AD5628::AD5628(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)
 {
   _type = 12;
 }
-
-
-
 
 
 //  -- END OF FILE --

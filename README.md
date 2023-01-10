@@ -185,6 +185,7 @@ Note that the library is not tested with hardware yet.
 ## Future
 
 #### Must
+
 - update and improve documentation
 - get test hardware
 - test the library
@@ -192,8 +193,8 @@ Note that the library is not tested with hardware yet.
 - check TODO's in code
 
 #### Should
+
 - write examples
-  - get/setValue
   - LDAC
   - power mode
 - support for RESET pin
@@ -202,12 +203,11 @@ Note that the library is not tested with hardware yet.
 - investigate value range checking for AD5648 and AD5628
   - now setValue() returns false if value > max, 
   - should value be clipped instead?
-- voltage interface(?)
-  - convenient.
 - **bool loadLDAC()** TODO?
 - investigate different type for AD5668_3 (as it does midscale)
 
 #### Could
+
 - CCmode + reset implies start value for getValue(ch)
   - is this implementable? costs?
 

@@ -2,7 +2,7 @@
 //
 //    FILE: AD56X8.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.1
+// VERSION: 0.1.2
 //    DATE: 2022-07-28
 // PURPOSE: Arduino library for AD56X8, SPI 8 channel Digital Analog Convertor.
 
@@ -10,7 +10,7 @@
 #include "Arduino.h"
 #include "SPI.h"
 
-#define AD56X8_LIB_VERSION        (F("0.1.1"))
+#define AD56X8_LIB_VERSION        (F("0.1.2"))
 
 
 #define AD56X8_PWR_NORMAL         0x00
