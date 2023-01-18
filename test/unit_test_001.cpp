@@ -85,7 +85,7 @@ unittest(get_type)
 
 unittest(get_setValue)
 {
-  AD5628 AD0(8);  //  12 bit 0..4096
+  AD5628 AD0(8);  //  12 bit  0..4096
 
   AD0.begin();
 
@@ -109,7 +109,7 @@ unittest(get_setValue)
 
 unittest(get_setPercentage)
 {
-  AD56X8 AD0(8);
+  AD5648 AD0(8);  //  14 bit  0..16383
 
   AD0.begin();
 
