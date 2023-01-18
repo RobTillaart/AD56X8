@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.3] - 2023-01-18
 - fix build
 - add unit tests (get_setPercentage)
+- add example: AD56X8_test_percentage.ino
 - move code from .h to .cpp
 - update README.md
 

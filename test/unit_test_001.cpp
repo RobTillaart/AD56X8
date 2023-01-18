@@ -116,7 +116,7 @@ unittest(get_setPercentage)
   //  valid channels
   for (uint8_t chan = 0; chan < 8; chan++)
   {
-    assertTrue(AD0.setValue(chan, chan * 8));
+    assertTrue(AD0.setPercentage(chan, chan * 8));
   }
   for (uint8_t chan = 0; chan < 8; chan++)
   {
