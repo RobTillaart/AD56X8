@@ -225,7 +225,6 @@ Note that the library is not tested with hardware yet.
   - void **triggerReset()**
 - support for EXTERNAL VREF
   - how?
-- **bool loadLDAC()** TODO?
 
 
 #### Could
